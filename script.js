@@ -2,14 +2,13 @@
 const SHEET_URL = 'https://api.allorigins.win/raw?url=https://docs.google.com/spreadsheets/d/e/2PACX-1vTdpSgrmQc3oQH2LxE6vQsR6I9oJXVPT5JEBeVFKCaPETDE02FfQOfow3lwaDxz60XfkQfbX2XBxDpk/pub?output=csv';
 
 // Fetch data and update leaderboard every 10 seconds
-const UPDATE_INTERVAL = 1000; // 10 seconds
+const UPDATE_INTERVAL = 10000; // 10 seconds
 
 async function fetchData() {
     try {
-        const response = await fetch(SHEET_URL);
+        const response = await fetch(`${SHEET_URL}&nocache=${Math.random()}`);
         const csv = await response.text();
         const data = csvToArray(csv);
-
         // Process data: sort, distinct, limit to top 20
         const uniqueUsers = [...new Map(data.map(item => [item.Name, item])).values()];
         const sorted = uniqueUsers.sort((a, b) => b.XP - a.XP).slice(0, 20);
