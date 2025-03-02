@@ -115,9 +115,10 @@ body {
 }
 
 .top-three .name {
-    font-size: 22px; /* Larger font size */
-    font-weight: bold;
-    color: #333;
+    font-size: 28px; /* Larger font size */
+    /* font-weight: bold; */
+    font-weight: 900;
+    color: #000000;
     margin-bottom: 5px;
     text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
     word-wrap: break-word;
@@ -127,10 +128,10 @@ body {
 }
 
 .top-three .xp {
-    font-size: 20px; /* Larger font size */
-    color: #444;
+    font-size: 26px; /* Larger font size */
+    color: #ffffff;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     word-wrap: break-word;
     white-space: normal;
     text-align: center;
@@ -184,7 +185,7 @@ body {
 }
 
 .name {
-    font-size: 20px; /* Larger font size */
+    font-size: 30px; /* Larger font size */
     font-weight: 900;
     color: #000000;
     margin-bottom: 5px;
@@ -194,7 +195,7 @@ body {
 }
 
 .xp {
-    font-size: 18px; /* Larger font size */
+    font-size: 26px; /* Larger font size */
     color: #ffffff;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
