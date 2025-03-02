@@ -1,9 +1,15 @@
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(-90deg, #056fec, #ffd700);
+    background-image: url("image_background.png");
+    background-color: #004e8d;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     margin: 0;
     padding: 20px;
     color: white;
+    min-height: 100vh;
 }
 
 .leaderboard {
@@ -40,10 +46,10 @@ body {
 
 .header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 32px; /* Larger font size */
     font-weight: bold;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Top 3 Users */
@@ -65,6 +71,10 @@ body {
     border-radius: 15px;
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    min-height: 300px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .top-three .user-item:hover {
@@ -74,50 +84,57 @@ body {
 
 .top-three .user-item:nth-child(1) {
     background: linear-gradient(135deg, #ffd700, #f7ce00);
-    order: 2; /* Gold in the middle */
-    margin-bottom: 40px; /* Raise gold higher */
+    order: 2;
+    margin-bottom: 40px;
 }
 
 .top-three .user-item:nth-child(2) {
     background: linear-gradient(135deg, #c0c0c0, #a8a8a8);
-    order: 1; /* Silver on the left */
+    order: 1;
 }
 
 .top-three .user-item:nth-child(3) {
     background: linear-gradient(135deg, #cd7f32, #b87333);
-    order: 3; /* Bronze on the right */
+    order: 3;
 }
 
 .top-three .avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    /* border: 5px solid #056fec; */
     margin-bottom: 15px;
     object-fit: cover;
 }
 
 .top-three .rank {
-    font-size: 24px;
+    font-size: 28px; /* Larger font size */
     font-weight: bold;
     color: white;
     margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .top-three .name {
-    font-size: 20px;
+    font-size: 22px; /* Larger font size */
     font-weight: bold;
     color: #333;
     margin-bottom: 5px;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); /* White shadow */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
 }
 
 .top-three .xp {
-    font-size: 16px;
+    font-size: 20px; /* Larger font size */
     color: #444;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); /* White shadow */
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
 }
 
 /* Rest of the Users */
@@ -149,7 +166,6 @@ body {
     height: 60px;
     border-radius: 50%;
     margin-right: 20px;
-    /* border: 3px solid #056fec; */
     object-fit: cover;
 }
 
@@ -157,42 +173,29 @@ body {
     flex-grow: 1;
 }
 
-.xp-badge {
-    background: #f67b1a;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
-}
-
 .rank {
-    font-size: 20px;
+    font-size: 24px; /* Larger font size */
     font-weight: bold;
     margin-right: 15px;
     width: 40px;
     text-align: center;
     color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .name {
+    font-size: 20px; /* Larger font size */
     font-weight: 900;
-    /* color: #ffffff; */
     color: #000000;
     margin-bottom: 5px;
-    -webkit-text-stroke: 0.1px #ffffff;/* Add stroke */
-
-    text-stroke: 1px #ffffff; /* Add stroke */
-
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    -webkit-text-stroke: 0.1px #ffffff;
+    text-stroke: 1px #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .xp {
-    /* color: #ffffff; */
+    font-size: 18px; /* Larger font size */
     color: #ffffff;
-
-    font-size: 16px;
     font-weight: 600;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Darker shadow */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
