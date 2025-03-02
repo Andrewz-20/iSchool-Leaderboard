@@ -19,7 +19,6 @@ async function fetchData() {
                     <div class="name">${user.Name}</div>
                     <div class="xp">${user.XP} XP</div>
                 </div>
-                <div class="xp-badge">Level ${user.Level}</div>
             </div>
         `).join('');
 
@@ -33,7 +32,6 @@ async function fetchData() {
                     <div class="name">${user.Name}</div>
                     <div class="xp">${user.XP} XP</div>
                 </div>
-                <div class="xp-badge">Level ${user.Level}</div>
             </li>
         `).join('');
     } catch (error) {
